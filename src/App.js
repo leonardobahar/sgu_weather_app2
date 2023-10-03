@@ -23,7 +23,13 @@ function App() {
         <tr>
           <td>
             <input id="cityNameTextField" type="text" name="cityName" />
-            <Button id="submitButton" type="submit">
+            <Button
+              onClick={() => {
+                alert("This function is not available yet");
+              }}
+              id="submitButton"
+              type="submit"
+            >
               Submit
             </Button>
           </td>
