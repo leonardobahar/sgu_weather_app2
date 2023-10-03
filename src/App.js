@@ -22,7 +22,12 @@ function App() {
         </tr>
         <tr>
           <td>
-            <input id="cityNameTextField" type="text" name="cityName" />
+            <input
+              id="cityNameTextField"
+              type="text"
+              name="cityName"
+              placeholder="i.e. Jakarta, Singapore"
+            />
             <Button
               onClick={() => {
                 alert("This function is not available yet");
