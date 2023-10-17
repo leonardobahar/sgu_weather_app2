@@ -2,8 +2,13 @@ import Button from "react-bootstrap/Button";
 
 import "./App.css";
 import icon128 from "./assets/images/icon128.png";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [cityInput, setCityInput] = useState("");
+  useEffect(() => {
+    console.log(cityInput);
+  }, [cityInput]);
   return (
     <div class="container">
       <h1>Weather App</h1>
@@ -26,7 +31,11 @@ function App() {
               id="cityNameTextField"
               type="text"
               name="cityName"
+              value={cityInput}
               placeholder="i.e. Jakarta, Singapore"
+              onChange={(event) => {
+                setCityInput(event.target.value);
+              }}
             />
             <Button
               onClick={() => {
