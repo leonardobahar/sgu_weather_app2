@@ -6,9 +6,24 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [cityInput, setCityInput] = useState("");
+
+  // Listens on changes in cityInput and then performs the function as intended
+  // This hook depends on the deps variable to run the func
   useEffect(() => {
     console.log(cityInput);
   }, [cityInput]);
+
+  // This hook runs on an empty arrayed dep
+  // This hook will only run once the page is loaded
+  useEffect(() => {
+    console.log("This page is loaded");
+  }, []);
+
+  // This hook runs once any state is updated
+  useEffect(() => {
+    console.log("Everything else is updated");
+  });
+
   return (
     <div class="container">
       <h1>Weather App</h1>
